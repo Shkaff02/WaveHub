@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+*{padding: 0; margin: 0; border: 0;}
+*,*:before, *::after{-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+nav, footer, header, aside{display: block;}
+html, body{height: 100%; width: 100%; font-size: 100%; line-height: 1; font-size: 14px; -ms-text-size-adjust: 100%;}
+input, button, textarea{font-family: inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0; border: 0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1, h2, h3, h4, h5, h6{font-size: inherit; font-weight: inherit;}
+
+::-webkit-scrollbar {
+    width: 0;
+  }
+
+p, li{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+$pgcol:#0F0A50;
+$txtcolor:#FFFFFF;
+$blneon:#13EFE2;
+$prpneon:#831F94;
+@mixin fontsets($fsz, $col, $wt) {
+    font-size: $fsz;
+    color: $txtcolor;
+    font-weight: $wt;
+}
+
+.page-header{
+    display: flex;
+    background-color: #0F0A50;
+    width: 100vw;
+    min-height: 10vh;
+    .header-logo{
+        width: 33.3%;
+        padding: 10px;
+        display: flex;
+        display: flex;
+        align-items: center;
+        .logo{
+            margin-left: 40px;
+            cursor: pointer;
+        }
+    }
+    .header-navbar{
+        width: 33.3%;
+        display: flex;
+        align-items: center;
+        ul{
+            li{
+                display: inline-block;
+                @include fontsets(24px,$txtcolor , 600);
+                padding: 10px;
+                cursor: pointer;
+                a{
+                    @include fontsets(24px,$txtcolor , 600);
+                    &:visited{
+                        @include fontsets(24px,$txtcolor , 600);
+                    }
+                }
+            }
+            #active{
+                border-bottom: 2px solid $blneon;
+            }
+        }
+    }
+    .header-info{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 33.3%;
+        .phone{
+            margin-right: 20px; 
+            @include fontsets(24px,$txtcolor , 600);
+        }
+        .account{
+            cursor: pointer;
+        }
+        p{
+            @include fontsets(24px,$txtcolor , 600);
+        }
+    }
+}
+
+.page-content{
+    .about{
+        padding: 20px 0 40px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .left{
+            width: 90vw;
+            svg{
+                width: 90vw;
+                
+            }
+        }
+        .right{
+            width: 90vw;
+            h2{
+                @include fontsets(30px,$txtcolor , 700);
+            }
+            p{
+                line-height: 30px;
+                @include fontsets(24px,$txtcolor , 600);
+            
+            }
+        }   
+    }
+  
+
+    .box{
+        width: 100vw;
+        padding-top: 50px;
+        .row{
+            display: flex;
+            width: 100vw;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            .col{
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .map{
+        display: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .us{
+            margin-top: 60px;
+            @include fontsets(24px,$txtcolor , 600);
+        }
+    }
+    width: 100vw;
+    background-color: $pgcol;
+    min-height: 80vh;
+    .first-info{
+        min-height: 40vh;
+        display: flex;
+        padding: 20px;
+        .left-bar{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 40%;
+            h1{
+                margin-bottom: 20px;
+                @include fontsets(36px,$txtcolor ,700);
+            }
+            p{
+                margin-bottom: 20px;
+                @include fontsets(18px,$txtcolor , 400);
+            }
+            .dance{
+                cursor: pointer;
+            }
+        }
+        .right-bar{
+            display: flex;
+            width: 60%;
+            .club-photo{
+               width: 50vw;
+            }
+        }
+    }
+    .concerts{
+        min-height: 40vh;
+        display: flex;
+        .more-concerts{
+            display: flex;
+            justify-content: center;
+            align-items: center     ;
+            width: 100vw;
+            svg{
+                width: 30vw;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.page-footer{
+    background-color: $pgcol;
+    width: 100vw;
+    border-top: 2px solid #13EFE2;
+    display: flex;
+    padding: 30px;
+    min-height: 10vh;
+    .footer-left{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .network{
+            margin-right: 100px;
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    }
+    .footer-right{
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        border-left: 2px solid $prpneon;
+        justify-content: center;
+        padding-left: 20px;
+        p{
+            @include fontsets(18px,$txtcolor , 400);
+        }
+    }
+}
