@@ -4,6 +4,18 @@
     document.getElementById('go').onclick = function() {
         window.location.href = 'calendar.html';
       };
+
+      document.getElementById('main').onclick = function() {
+        window.location.href = 'index.html';
+      };
+
+      document.getElementById('contacts').onclick = function() {
+        window.location.href = 'contacts.html';
+      };
+
+      document.getElementById('us').onclick = function() {
+        window.location.href = 'about-us.html';
+      };
     
       document.getElementById('dan').onclick = function() {
         window.location.href = 'about-us.html';
