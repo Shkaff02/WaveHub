@@ -186,7 +186,7 @@ p, li {
         justify-content: space-around;
   }
   .page-footer .footer-left .social a {
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 600;
     color: #13EFE2;
     margin-right: 10px;
@@ -204,7 +204,7 @@ p, li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-left: 20px;
+    padding-left: 0 !important;
   }
   .page-footer .footer-right p {
     font-size: 12px !important;
