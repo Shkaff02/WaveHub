@@ -186,7 +186,7 @@ p, li {
         justify-content: space-around;
   }
   .page-footer .footer-left .social a {
-    font-size: 14px;
+    font-size: 14px !important;
     font-weight: 600;
     color: #13EFE2;
     margin-right: 10px;
